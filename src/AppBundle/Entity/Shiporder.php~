@@ -1,0 +1,61 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Shiporder
+ *
+ * @ORM\Table(name="shiporder")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ShiporderRepository")
+ */
+class Shiporder
+{
+    
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="orderid", type="integer")
+     * @ORM\Id
+     */
+    private $orderid;
+
+    /**
+     * @var int
+     * 
+     * @ORM\ManyToOne(targetEntity="Person")
+     * @ORM\JoinColumn(name="orderperson", referencedColumnName="personid")
+     */
+    private $orderperson;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="shiptoname", type="string", length=100)
+     */
+    private $shiptoname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="shiptoaddress", type="string", length=200)
+     */
+    private $shiptoaddress;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="shiptocity", type="string", length=100)
+     */
+    private $shiptocity;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="shiptocountry", type="string", length=50)
+     */
+    private $shiptocountry;
+
+
+}

@@ -1,0 +1,48 @@
+{% extends 'template.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container" class="col-md-10 col-md-offset-1 col-sm-12" style="top: 30px">
+        	<div class="row">
+            	<div class="panel panel-primary">
+            		<div class="panel-heading">Analyze information</div>
+            		
+	                <div class="panel-body">
+    	            	<div class="row col-md-10 col-md-offset-1 col-xs-12">
+    	            		<div class="table-responsive">
+        	        			<table class="table table-striped">
+        	        				<thead>
+        	        					<th>Order ID</th>
+	        	        				<th>Person name</th>
+    	    	        				<th>Item</th>
+        		        				<th>Quantity</th>
+        		        				<th>Price</th>
+        		        				<th>Ship to: name</th>
+        		        				<th>Ship to: address</th>
+        	    	    			</thead>
+        	    	    			<tbody>
+        	    	    				{% for item in shiporders %}
+        	    	    					<tr>
+        	    	    						<td>{{ item.orderid.orderid }}</td>
+        	    	    						<td>{{ item.orderid.orderperson.personname }}</td>
+        	    	    						<td>{{ item.title }}</td>
+        	    	    						<td>{{ item.quantity }}</td>
+        	    	    						<td>{{ item.price }}</td>
+        	    	    						<td>{{ item.orderid.shiptoname }}</td>
+        	    	    						<td>{{ item.orderid.shiptoaddress }}, {{ item.orderid.shiptocity }} - {{ item.orderid.shiptocountry }}</td>
+        	    	    					</tr>
+        	    	    				{% endfor %}
+        	    	    			</tbody>
+        	        			</table>
+        	        		</div>
+						</div>
+					</div>
+        	    </div>
+        	</div>
+	        
+	        <div class="row">
+        		<div id="div-msg"></div>
+        	</div>
+		</div>
+    </div>
+{% endblock %}

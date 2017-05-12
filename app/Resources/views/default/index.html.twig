@@ -1,0 +1,26 @@
+{% extends 'template.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container" class="col-md-10 col-md-offset-1 col-sm-12" style="top: 30px">
+        	<div class="row">
+            	<div class="panel panel-primary">
+            		<div class="panel-heading">Upload XML file</div>
+            		
+	                <div class="panel-body">
+    	            	<div class="row col-md-10 col-md-offset-1 col-xs-12">
+        	        		<form id="my-awesome-dropzone" action="{{ path('upload') }}" method="post" enctype="multipart/form-data" class="dropzone">
+								
+								<input type="submit" id="submit-all" class="btn btn-primary" value="Upload" />
+							</form>
+						</div>
+					</div>
+        	    </div>
+        	</div>
+	        
+	        <div class="row">
+        		<div id="div-msg"></div>
+        	</div>
+		</div>
+    </div>
+{% endblock %}
