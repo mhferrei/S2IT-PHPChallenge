@@ -15,4 +15,4 @@ Durante a instação, será necessário configurar os parâmetros do banco de da
 
 Concluída a etapa anterior, usaremos o Doctrine ORM para gerenciar as entidades no banco de dados. Digite o comando "php app\console doctrine:schema:update".
 
-Feito isso, inicie o serviço, através do comando "php app/console server:run" e rode a aplicação no navegador (http://localhost:8000).
+Feito isso, inicie o serviço através do comando "php app/console server:run" e rode a aplicação no navegador (http://localhost:8000).
